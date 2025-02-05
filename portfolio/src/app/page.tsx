@@ -3,15 +3,15 @@ import { Github } from "lucide-react";
 import { Linkedin } from "lucide-react";
 import Darkmode from "../components/ui/dark-toggle";
 import profile from "../../public/profile_img.png";
+import { techStackImages } from "@/lib/utils";
+
+import { Slider } from "@/components/slider";
 
 export default function Home() {
   return (
     <>
-      <div className="absolute top-2 right-2 z-50">
-        <Darkmode />
-      </div>
-      <section className="flex flex-row justify-start h-[150vh] ">
-        <div className="z-10 flex flex-col justify-between px-10">
+      <section className="flex flex-row justify-start  ">
+        <div className="z-10 flex flex-col  gap-[20%] px-10">
           <h1 className="text-[110px] w-[130%] ml-[-40px]">
             WEBUDVIKLER NICOLAI HARMS
           </h1>
@@ -19,7 +19,7 @@ export default function Home() {
             Fullstack Developor med passion for inaktive løsniger og design{" "}
           </p>
 
-          <div className="flex pl-20 w-full flex-col">
+          <div className="flex pl-20 mt-[250px] pb-48 w-full flex-col">
             <h2 className="text-5xl  mb-8">
               Her er lidt ekstra info, som jeg ikke helt ved hvad kommer til at
               handle om
@@ -30,7 +30,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-full">
+        <div className="w-full h-[200vh]">
           <div className="h-screen w-full sticky top-0 right-0 ">
             <div className="absolute top-0 right-0 w-[130%] h-screen">
               <Image
@@ -46,10 +46,63 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col justify-center items-center h-[100vh]">
-        <h2>Portfolio</h2>
-        <p>Her er en samling af mine projekter</p>
+      <section className="flex flex-col justify-center items-center">
+        <Slider
+          title="Tech Stack"
+          items={[
+            {
+              image: techStackImages.nextjs,
+              text: "Next.js",
+              alt: "Next.js Logo",
+            },
+            {
+              image: techStackImages.react,
+              text: "React",
+              alt: "React Logo",
+            },
+            {
+              image: techStackImages.typescript,
+              text: "TypeScript",
+              alt: "TypeScript Logo",
+            },
+            {
+              image: techStackImages.tailwind,
+              text: "Tailwind CSS",
+              alt: "Tailwind CSS Logo",
+            },
+            {
+              image: techStackImages.mongodb,
+              text: "MongoDB",
+              alt: "MongoDB Logo",
+            },
+            {
+              image: techStackImages.mysql,
+              text: "MySQL",
+              alt: "MySQL Logo",
+            },
+            {
+              image: techStackImages.php,
+              text: "PHP",
+              alt: "PHP Logo",
+            },
+            {
+              image: techStackImages.remix,
+              text: "Remix",
+              alt: "Remix Logo",
+            },
+            {
+              image: techStackImages.svelte,
+              text: "Svelte",
+              alt: "Svelte Logo",
+            },
+          ]}
+          itemsPerView={6}
+          autoplaySpeed={5000}
+        />
       </section>
+      <div className="fixed bottom-2 right-2 z-50">
+        <Darkmode />
+      </div>
     </>
   );
 }
