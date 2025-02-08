@@ -3,7 +3,6 @@
 import * as React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import { icons } from "lucide-react";
 
@@ -47,11 +46,8 @@ export const Slider = ({
   );
 
   const renderIcon = (iconName: IconName) => {
-    const LucideIcon = dynamic(
-      () => import("lucide-react").then((mod) => mod[iconName]),
-      { ssr: false }
-    );
-    return <LucideIcon className="w-8 h-8" />;
+    const Icon = icons[iconName];
+    return <Icon className="w-8 h-8" />;
   };
 
   return (
