@@ -53,8 +53,8 @@ export const Slider = ({
   return (
     <div className="w-full py-20 lg:py-40">
       <div className="container mx-auto">
-        <div className="grid grid-cols-5 gap-10 items-center">
-          <h3 className="text-xl tracking-tighter lg:max-w-xl font-regular text-left">
+        <div className="flex gap-10 items-center">
+          <h3 className="text-2xl tracking-tighter lg:max-w-xl font-regular text-left">
             {title}
           </h3>
           <div className="relative w-full col-span-4">

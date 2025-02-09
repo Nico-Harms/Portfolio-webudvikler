@@ -9,6 +9,18 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "3rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "4rem",
+      },
+      screens: {
+        "2xl": "1920px",
+      },
+    },
     extend: {
       keyframes: {
         scroll: {
