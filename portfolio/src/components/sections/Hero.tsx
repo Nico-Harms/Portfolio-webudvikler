@@ -7,15 +7,15 @@ import profile from "../../../public/profile_img.png";
 export const Hero = () => {
   return (
     <section className="flex flex-row justify-start">
-      <div className="z-10 flex flex-col gap-[20%] px-10">
-        <motion.h1 className="text-[110px] w-[130%] ml-[-40px]" {...fadeInUp}>
+      <div className="z-10 flex w-1/2 flex-col gap-[20%] px-10">
+        <motion.h1 className="text-[110px] w-[140%] ml-[-40px]" {...fadeInUp}>
           WEBUDVIKLER NICOLAI HARMS
         </motion.h1>
         <motion.p className="text-4xl w-2/3" {...createDelayedFadeInUp(0.2)}>
           Fullstack Developor med passion for interaktive løsninger og design{" "}
         </motion.p>
 
-        <div className="flex pl-20 mt-[250px] pb-48 w-full flex-col">
+        <div className="flex pl-20 w-full flex-col">
           <motion.h2 className="text-5xl mb-8" {...createDelayedFadeInUp(0.4)}>
             Her er lidt ekstra info, som jeg ikke helt ved hvad kommer til at
             handle om

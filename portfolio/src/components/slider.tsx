@@ -38,7 +38,7 @@ export const Slider = ({
     [
       Autoplay({
         delay: 0,
-        stopOnInteraction: true,
+        stopOnInteraction: false,
         stopOnMouseEnter: true,
         playOnInit: true,
       }),
@@ -58,13 +58,13 @@ export const Slider = ({
             {title}
           </h3>
           <div className="relative w-full col-span-4">
-            <div className="bg-gradient-to-r from-background via-white/0 to-background z-10 absolute left-0 top-0 right-0 bottom-0 w-full h-full"></div>
+            <div className="bg-gradient-to-r from-background via-white/0 to-background z-10 absolute left-0 top-0 right-0 bottom-0 w-full h-full pointer-events-none"></div>
             <div className="overflow-hidden" ref={emblaRef}>
-              <div className="flex cursor-grab active:cursor-grabbing">
+              <div className="flex ">
                 {items.map((item, index) => (
                   <div
                     key={index}
-                    className={`flex-none px-2`}
+                    className={`flex-none px-2 `}
                     style={{ width: `${100 / itemsPerView}%` }}
                   >
                     <div className="relative group">
@@ -80,7 +80,6 @@ export const Slider = ({
                           />
                         )}
                       </div>
-                      {/* Text overlay on hover */}
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <span className="text-sm font-medium bg-background/80 p-2 rounded-md">
                           {item.text}

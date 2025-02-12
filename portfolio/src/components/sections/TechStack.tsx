@@ -3,7 +3,10 @@ import { techStackImages } from "@/lib/utils";
 
 export const TechStack = () => {
   return (
-    <section className="flex flex-col justify-center items-center">
+    <section
+      id="tech-stack"
+      className="flex flex-col justify-center items-center"
+    >
       <Slider
         title="Tech Stack"
         items={[
