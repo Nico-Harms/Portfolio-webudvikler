@@ -8,10 +8,13 @@ export const Hero = () => {
   return (
     <section className="flex flex-row justify-start">
       <div className="z-10 flex w-1/2 flex-col gap-[20%] px-10">
-        <motion.h1 className="text-[110px] w-[140%] ml-[-40px]" {...fadeInUp}>
+        <motion.h1 className="headline w-[140%] ml-[-40px]" {...fadeInUp}>
           WEBUDVIKLER NICOLAI HARMS
         </motion.h1>
-        <motion.p className="text-4xl w-2/3" {...createDelayedFadeInUp(0.2)}>
+        <motion.p
+          className="text-4xl tiny-headline w-2/3"
+          {...createDelayedFadeInUp(0.2)}
+        >
           Fullstack Developor med passion for interaktive løsninger og design{" "}
         </motion.p>
 

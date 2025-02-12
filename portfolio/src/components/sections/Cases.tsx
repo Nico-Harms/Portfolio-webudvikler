@@ -39,9 +39,14 @@ export default function Cases() {
           <motion.h2 className="text-4xl font-bold" {...fadeInUp}>
             Featured Projects
           </motion.h2>
-          <p className="text-gray-500">
-            Here are some of the projects I&apos;ve worked on.
-          </p>
+          <div className="flex flex-col items-end gap-4">
+            <p className="text-gray-500">
+              Here are some of the projects I&apos;ve worked on.
+            </p>
+            <Link href="/cases">
+              <p className="text-gray-500">View all projects</p>
+            </Link>
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cases.map((project, index) => (
