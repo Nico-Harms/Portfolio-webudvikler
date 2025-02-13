@@ -7,7 +7,7 @@ import { TechStack } from "@/components/sections/TechStack";
 import Darkmode from "@/components/ui/dark-toggle";
 import Cases from "@/components/sections/Cases";
 import { Header } from "@/components/ui/Header";
-
+import AboutMe from "@/components/sections/AboutMe";
 export default function Home() {
   useScrollToTop();
   useSmoothScroll();
@@ -18,6 +18,7 @@ export default function Home() {
       <Hero />
       <TechStack />
       <Cases />
+      <AboutMe />
       <div className="fixed bottom-2 right-2 z-50">
         <Darkmode />
       </div>

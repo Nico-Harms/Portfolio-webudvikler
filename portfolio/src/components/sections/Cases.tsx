@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { fadeInUp, createDelayedFadeInUp } from "@/hooks/animations";
 import Image from "next/image";
 import Link from "next/link";
@@ -41,9 +41,14 @@ export default function Cases() {
           </motion.h2>
           <div className="flex flex-col items-end gap-4">
             <p className="text-gray-500">
-              Here are some of the projects I&apos;ve worked on.
+              Disse cases er en blanding af mine nyeste og mest varierede
+              projekter. De viser min evne til at arbejde med forskellige
+              teknologier, skabe brugervenlige løsninger og tilpasse mig
+              forskellige krav og behov. Projekterne afspejler både mit tekniske
+              fundament og min passion for at udvikle funktionelle og visuelt
+              tiltalende webløsninger.{" "}
             </p>
-            <Link href="/cases">
+            <Link href="/archievepage">
               <p className="text-gray-500">View all projects</p>
             </Link>
           </div>
