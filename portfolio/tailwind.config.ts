@@ -120,7 +120,7 @@ export default {
           padding: "0 4rem",
         },
         ".distance-top": {
-          marginTop: "12rem",
+          marginTop: "10rem",
         },
       });
     },
