@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { fadeInUp, createDelayedFadeInUp } from "@/hooks/animations";
 import Image from "next/image";
 import Link from "next/link";
-
+import { MoveRight } from "lucide-react";
 // Mock data - replace with your actual cases
 const cases = [
   {
@@ -33,14 +33,15 @@ const cases = [
 
 export default function Cases() {
   return (
-    <section id="projects" className="w-full py-20">
-      <div className="container mx-auto ">
-        <div className="flex items-center justify-between mb-12">
-          <motion.h2 className="text-4xl font-bold" {...fadeInUp}>
-            Featured Projects
+    <section id="projects" className="w-full distance-top">
+      <div className="wrapper mx-auto ">
+        <div className="flex items-center justify-between ">
+          <motion.h2 className="small-headline w-1/3 font-bold" {...fadeInUp}>
+            Featured <span className="text-[#BD8E2A]">Projects</span>
+            <span className="text-[#BD8E2A]"></span>.
           </motion.h2>
-          <div className="flex flex-col items-end gap-4">
-            <p className="text-gray-500">
+          <div className="flex w-1/3 flex-col items-end gap-4">
+            <p className="p-tag">
               Disse cases er en blanding af mine nyeste og mest varierede
               projekter. De viser min evne til at arbejde med forskellige
               teknologier, skabe brugervenlige løsninger og tilpasse mig
@@ -48,11 +49,14 @@ export default function Cases() {
               fundament og min passion for at udvikle funktionelle og visuelt
               tiltalende webløsninger.{" "}
             </p>
-            <Link href="/archievepage">
-              <p className="text-gray-500">View all projects</p>
-            </Link>
           </div>
         </div>
+        <Link href="/archievepage">
+          <p className="text-end pb-2 flex items-center justify-end gap-2">
+            View all projects
+            <MoveRight className="w-7 h-7 text-[#BD8E2A]" />
+          </p>
+        </Link>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cases.map((project, index) => (
             <Link href={project.link} key={project.id}>

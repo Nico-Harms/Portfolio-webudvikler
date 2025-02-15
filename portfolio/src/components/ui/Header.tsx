@@ -35,34 +35,34 @@ export const Header = () => {
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className="fixed top-0 w-full z-50 transition-colors duration-300"
     >
-      <div className="container mx-auto">
+      <div className="max-w-container mx-auto">
         <nav className="flex items-center justify-end h-20 gap-12">
-          <button
-            onClick={() => scrollToSection("projects")}
-            className={`text-lg font-medium transition-colors ${
-              atTop
-                ? "text-black hover:text-primary"
-                : "text-white hover:text-primary"
-            }`}
-          >
-            Projects
-          </button>
           <button
             onClick={() => scrollToSection("tech-stack")}
             className={`text-lg font-medium transition-colors ${
               atTop
-                ? "text-black hover:text-primary"
-                : "text-white hover:text-primary"
+                ? "text-black hover:text-[#BD8E2A]"
+                : "text-white hover:text-[#BD8E2A]"
             }`}
           >
             Tech Stack
           </button>
           <button
-            onClick={() => scrollToSection("contact")}
+            onClick={() => scrollToSection("projects")}
             className={`text-lg font-medium transition-colors ${
               atTop
-                ? "text-black hover:text-primary"
-                : "text-white hover:text-primary"
+                ? "text-black hover:text-[#BD8E2A]"
+                : "text-white hover:text-[#BD8E2A]"
+            }`}
+          >
+            Projects
+          </button>
+          <button
+            onClick={() => scrollToSection("about")}
+            className={`text-lg font-medium transition-colors ${
+              atTop
+                ? "text-black hover:text-[#BD8E2A]"
+                : "text-white hover:text-[#BD8E2A]"
             }`}
           >
             Contact

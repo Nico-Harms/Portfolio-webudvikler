@@ -32,7 +32,7 @@ const cases = [
 export default function ArchiveCases() {
   return (
     <section id="projects" className="w-full py-20">
-      <div className="container mx-auto ">
+      <div className="wrapper mx-auto ">
         <div className="flex items-center justify-between mb-12">
           <div className="flex flex-col items-end gap-4">
             <p className="text-gray-500">

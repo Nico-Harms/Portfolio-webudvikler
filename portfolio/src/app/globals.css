@@ -21,6 +21,9 @@ h6 {
   --headline-3: clamp(3.24rem, 0.7672rem + 10.5504vw, 13.4277rem);
   --headline-4: clamp(3.888rem, 0.7577rem + 13.3558vw, 16.7847rem);
   --headline-5: clamp(4.6656rem, 0.7056rem + 16.896vw, 20.9808rem);
+  --p: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+
+  --golden-color: #bd8e2a;
 }
 
 .big-headline {
@@ -37,6 +40,9 @@ h6 {
 
 .tiny-headline {
   font-size: var(--headline--2);
+}
+.p-tag {
+  font-size: var(--p) !important;
 }
 
 body {
@@ -100,6 +106,13 @@ body {
     --chart-5: 340 75% 55%;
     background: #363635;
   }
+}
+.gradient-background {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 65.5%,
+    #7f7f7f 100%
+  );
 }
 
 @layer base {
