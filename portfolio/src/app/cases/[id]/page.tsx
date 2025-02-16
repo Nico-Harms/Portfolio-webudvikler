@@ -12,16 +12,18 @@ export async function generateStaticParams() {
 export default async function CaseDetail({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  // Await params, even though it's already resolved
-  const { id: caseId } = await params; // or await Promise.resolve(params)
+  // Await params to resolve the promise
+  const resolvedParams = await params;
+  const caseId = resolvedParams.id;
 
   const caseData = cases.find((c) => c.id === parseInt(caseId));
 
   if (!caseData) {
     return <div>Project not found</div>;
   }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
