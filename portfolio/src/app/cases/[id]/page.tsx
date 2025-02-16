@@ -1,4 +1,3 @@
-// app/cases/[id]/page.tsx
 import Image from "next/image";
 import { cases } from "@/data/cases";
 
@@ -15,14 +14,14 @@ export default async function CaseDetail({
 }: {
   params: { id: string };
 }) {
-  // Access params.id directly without awaiting
-  const caseId = params.id; // No need to await
+  // Await params, even though it's already resolved
+  const { id: caseId } = await params; // or await Promise.resolve(params)
+
   const caseData = cases.find((c) => c.id === parseInt(caseId));
 
   if (!caseData) {
     return <div>Project not found</div>;
   }
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
