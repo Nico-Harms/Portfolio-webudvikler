@@ -104,6 +104,11 @@ export default {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        golden: "#BD8E2A",
+        "slider-item": {
+          DEFAULT: "#FFFF",
+          dark: "#363635",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -117,7 +122,17 @@ export default {
       addUtilities({
         ".wrapper": {
           maxWidth: "1920px",
-          padding: "0 4rem",
+          padding: "0 2.5rem",
+        },
+        "@media (max-width: 1023px)": {
+          ".wrapper": {
+            padding: "0 2rem",
+          },
+          "@media (max-width: 767px)": {
+            ".wrapper": {
+              padding: "0 1.25rem",
+            },
+          },
         },
         ".distance-top": {
           marginTop: "10rem",

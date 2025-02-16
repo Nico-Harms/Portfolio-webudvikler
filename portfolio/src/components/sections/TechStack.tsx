@@ -56,7 +56,6 @@ export const TechStack = () => {
             alt: "Svelte Logo",
           },
         ]}
-        itemsPerView={6}
         autoplaySpeed={5000}
       />
     </section>

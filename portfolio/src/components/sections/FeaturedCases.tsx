@@ -1,46 +1,23 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { fadeInUp, createDelayedFadeInUp } from "@/hooks/animations";
 import Image from "next/image";
 import Link from "next/link";
 import { MoveRight } from "lucide-react";
-// Mock data - replace with your actual cases
-const cases = [
-  {
-    id: 1,
-    title: "Lendr",
-    backgroundImage: "/cases/lendr.png",
-    mockupImage: "/cases/lendr-mock.png", // Replace with actual mockup image
-    link: "/cases/lendr",
-    tags: ["Nextjs", "TailwindCSS", "MySQL"],
-  },
-  {
-    id: 2,
-    title: "Ligeværd",
-    backgroundImage: "/cases/ligevaerd.png",
-    mockupImage: "/cases/ligevaerd-mock.png",
-    link: "/cases/ligevaerd",
-    tags: ["PHP", "Wordpress", "JS"],
-  },
-  {
-    id: 3,
-    title: "Owners Club",
-    backgroundImage: "/cases/ownersclub.png",
-    mockupImage: "/cases/ownersclub-mock.png",
-    link: "/cases/ownersclub",
-    tags: ["Wordpress", "Elementor", "Javascript"],
-  },
-];
+import { cases } from "@/data/cases";
 
-export default function Cases() {
+export default function FeaturedCases() {
   return (
     <section id="projects" className="w-full distance-top">
-      <div className="wrapper mx-auto ">
-        <div className="flex items-center justify-between ">
-          <motion.h2 className="small-headline w-1/3 font-bold" {...fadeInUp}>
-            Featured <span className="text-[#BD8E2A]">Projects</span>
-            <span className="text-[#BD8E2A]"></span>.
+      <div className="wrapper mx-auto">
+        <div className="flex items-center justify-between max-lg:flex-col gap-6">
+          <motion.h2
+            className="small-headline w-1/3 font-bold max-lg:w-full"
+            {...fadeInUp}
+          >
+            Udvalgte <span className="text-[#BD8E2A] uppercase">projekter</span>
+            <span className="text-[#BD8E2A] uppercase">.</span>
           </motion.h2>
-          <div className="flex w-1/3 flex-col items-end gap-4">
+          <div className="flex w-1/2 flex-col items-end gap-4 max-lg:w-full">
             <p className="p-tag">
               Disse cases er en blanding af mine nyeste og mest varierede
               projekter. De viser min evne til at arbejde med forskellige
@@ -51,15 +28,17 @@ export default function Cases() {
             </p>
           </div>
         </div>
+
         <Link href="/archievepage">
           <p className="text-end pb-2 flex items-center justify-end gap-2">
             View all projects
             <MoveRight className="w-7 h-7 text-[#BD8E2A]" />
           </p>
         </Link>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-lg:pt-2">
           {cases.map((project, index) => (
-            <Link href={project.link} key={project.id}>
+            <Link href={`/cases/${project.id}`} key={project.id}>
               <motion.div
                 className="group relative w-full h-[400px] rounded-xl overflow-hidden cursor-pointer"
                 {...createDelayedFadeInUp(0.2 * index)}

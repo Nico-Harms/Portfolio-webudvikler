@@ -1,48 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
-
-// Mock data - replace with your actual cases
-const cases = [
-  {
-    id: 1,
-    title: "Lendr",
-    backgroundImage: "/cases/lendr.png",
-    mockupImage: "/cases/lendr-mock.png", // Replace with actual mockup image
-    link: "/cases/lendr",
-    tags: ["Nextjs", "TailwindCSS", "MySQL"],
-  },
-  {
-    id: 2,
-    title: "Ligeværd",
-    backgroundImage: "/cases/ligevaerd.png",
-    mockupImage: "/cases/ligevaerd-mock.png",
-    link: "/cases/ligevaerd",
-    tags: ["PHP", "Wordpress", "JS"],
-  },
-  {
-    id: 3,
-    title: "Owners Club",
-    backgroundImage: "/cases/ownersclub.png",
-    mockupImage: "/cases/ownersclub-mock.png",
-    link: "/cases/ownersclub",
-    tags: ["Wordpress", "Elementor", "Javascript"],
-  },
-];
+import { cases } from "@/data/cases";
 
 export default function ArchiveCases() {
   return (
-    <section id="projects" className="w-full py-20">
-      <div className="wrapper mx-auto ">
-        <div className="flex items-center justify-between mb-12">
-          <div className="flex flex-col items-end gap-4">
-            <p className="text-gray-500">
-              Here are some of the projects I&apos;ve worked on.
+    <section id="projects" className="w-full distance-top">
+      <div className="wrapper mx-auto">
+        <div className="flex items-center justify-between max-lg:flex-col gap-6">
+          <h2 className="small-headline w-1/3 font-bold max-lg:w-full">
+            Archive <span className="text-[#BD8E2A]">Projects</span>
+            <span className="text-[#BD8E2A]"></span>.
+          </h2>
+          <div className="flex w-1/2 flex-col items-end gap-4 max-lg:w-full">
+            <p className="p-tag">
+              Disse cases er en blanding af mine nyeste og mest varierede
+              projekter. De viser min evne til at arbejde med forskellige
+              teknologier, skabe brugervenlige løsninger og tilpasse mig
+              forskellige krav og behov. Projekterne afspejler både mit tekniske
+              fundament og min passion for at udvikle funktionelle og visuelt
+              tiltalende webløsninger.{" "}
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-lg:pt-2">
           {cases.map((project) => (
-            <Link href={project.link} key={project.id}>
+            <Link href={`/cases/${project.id}`} key={project.id}>
               <div className="group relative w-full h-[400px] rounded-xl overflow-hidden cursor-pointer">
                 {/* Blurred background image */}
                 <div className="absolute inset-0">

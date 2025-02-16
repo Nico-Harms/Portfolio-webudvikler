@@ -5,7 +5,7 @@ import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { Hero } from "@/components/sections/Hero";
 import { TechStack } from "@/components/sections/TechStack";
 import Darkmode from "@/components/ui/dark-toggle";
-import Cases from "@/components/sections/Cases";
+import FeaturedCases from "@/components/sections/FeaturedCases";
 import { Header } from "@/components/ui/Header";
 import AboutMe from "@/components/sections/AboutMe";
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
       <Header />
       <Hero />
       <TechStack />
-      <Cases />
+      <FeaturedCases />
       <AboutMe />
       <div className="fixed bottom-2 right-2 z-50">
         <Darkmode />

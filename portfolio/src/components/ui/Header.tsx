@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { Hamburger } from "./hamburger";
+import "../../app/styles/hamburger.css";
 
 export const Header = () => {
   const { scrollY } = useScroll();
@@ -21,13 +23,6 @@ export const Header = () => {
     hidden: { y: "-100%" },
   };
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <motion.header
       variants={variants}
@@ -35,38 +30,17 @@ export const Header = () => {
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className="fixed top-0 w-full z-50 transition-colors duration-300"
     >
-      <div className="max-w-container mx-auto">
-        <nav className="flex items-center justify-end h-20 gap-12">
-          <button
-            onClick={() => scrollToSection("tech-stack")}
-            className={`text-lg font-medium transition-colors ${
-              atTop
-                ? "text-black hover:text-[#BD8E2A]"
-                : "text-white hover:text-[#BD8E2A]"
-            }`}
-          >
-            Tech Stack
-          </button>
-          <button
-            onClick={() => scrollToSection("projects")}
-            className={`text-lg font-medium transition-colors ${
-              atTop
-                ? "text-black hover:text-[#BD8E2A]"
-                : "text-white hover:text-[#BD8E2A]"
-            }`}
-          >
-            Projects
-          </button>
-          <button
-            onClick={() => scrollToSection("about")}
-            className={`text-lg font-medium transition-colors ${
-              atTop
-                ? "text-black hover:text-[#BD8E2A]"
-                : "text-white hover:text-[#BD8E2A]"
-            }`}
-          >
-            Contact
-          </button>
+      <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="flex items-center justify-between h-20 gap-4">
+          <div className="flex items-center">
+            <h1
+              className={`text-xl text-white font-bold ${atTop ? "opacity-0" : "opacity-100"} transition-opacity duration-300 max-lg:hidden`}
+            >
+              Nicolai.harms@gmail.com
+            </h1>
+          </div>
+
+          <Hamburger onClick={() => {}} isAtTop={atTop} />
         </nav>
       </div>
     </motion.header>

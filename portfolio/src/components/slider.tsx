@@ -1,10 +1,10 @@
 "use client";
 
-import * as React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { icons } from "lucide-react";
+import React, { useEffect, useState } from "react";
 
 type IconName = keyof typeof icons;
 
@@ -18,16 +18,10 @@ interface SliderItem {
 interface SliderProps {
   items: SliderItem[];
   title: string;
-  itemsPerView?: number; // Number of items visible at once
   autoplaySpeed?: number; // Speed of autoplay in ms
 }
 
-export const Slider = ({
-  items,
-  title,
-  itemsPerView = 6,
-  autoplaySpeed = 8000,
-}: SliderProps) => {
+export const Slider = ({ items, title, autoplaySpeed = 8000 }: SliderProps) => {
   const [emblaRef] = useEmblaCarousel(
     {
       loop: true,
@@ -45,6 +39,25 @@ export const Slider = ({
     ]
   );
 
+  const [itemsPerView, setItemsPerView] = useState(6);
+
+  const updateItemsPerView = () => {
+    if (window.innerWidth < 1023) {
+      setItemsPerView(3);
+    } else {
+      setItemsPerView(6);
+    }
+  };
+
+  useEffect(() => {
+    updateItemsPerView();
+    window.addEventListener("resize", updateItemsPerView);
+
+    return () => {
+      window.removeEventListener("resize", updateItemsPerView);
+    };
+  }, []);
+
   const renderIcon = (iconName: IconName) => {
     const Icon = icons[iconName];
     return <Icon className="w-8 h-8" />;
@@ -53,7 +66,7 @@ export const Slider = ({
   return (
     <div className="w-full distance-top">
       <div className="wrapper mx-auto">
-        <div className="flex gap-10 items-center">
+        <div className="flex gap-10 items-center max-lg:flex-col">
           <h3 className="text-2xl tracking-tighter lg:max-w-xl font-regular text-left">
             {title}
           </h3>
@@ -64,19 +77,19 @@ export const Slider = ({
                 {items.map((item, index) => (
                   <div
                     key={index}
-                    className={`flex-none px-2 `}
+                    className={`flex-none px-2 bg-slider-item dark:bg-slider-item-dark`}
                     style={{ width: `${100 / itemsPerView}%` }}
                   >
                     <div className="relative group">
-                      <div className="flex rounded-md aspect-square bg-muted items-center justify-center p-2 transition-all duration-300 group-hover:blur-sm">
+                      <div className="flex rounded-md aspect-square dark:bg-white bg-muted items-center justify-center p-2 transition-all duration-300 group-hover:blur-sm">
                         {item.iconName && renderIcon(item.iconName)}
                         {item.image && (
                           <Image
                             src={item.image}
                             alt={item.alt || item.text}
-                            width={80}
-                            height={80}
-                            className="object-contain"
+                            width={70}
+                            height={70}
+                            className="object-contain max-lg:w-14 max-lg:h-14"
                           />
                         )}
                       </div>
