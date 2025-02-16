@@ -3,14 +3,21 @@ import Image from "next/image";
 import { cases } from "@/data/cases";
 
 import BackButton from "@/components/backbutton";
+
 export async function generateStaticParams() {
   return cases.map((caseItem) => ({
     id: caseItem.id.toString(),
   }));
 }
 
-export default function CaseDetail({ params }: { params: { id: string } }) {
-  const caseData = cases.find((c) => c.id === parseInt(params.id));
+export default async function CaseDetail({
+  params,
+}: {
+  params: { id: string };
+}) {
+  // Access params.id directly without awaiting
+  const caseId = params.id; // No need to await
+  const caseData = cases.find((c) => c.id === parseInt(caseId));
 
   if (!caseData) {
     return <div>Project not found</div>;
