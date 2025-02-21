@@ -5,11 +5,15 @@ export const cases = [
     title: "Lendr",
     backgroundImage: "/cases/lendr.png",
     mockupImage: "/cases/lendr-mock.png",
-    description: "Detailed description of the Lendr project...",
+    intro:
+      "Lendr er en innovativ låne-platform udviklet med Next.js og TailwindCSS.",
+    description:
+      "Dette projekt er et eksamens skoleprojekt, hvor vi skulle udvikle en låneplatform. Platformen inkluderer features som real-time validering, responsivt design og sikker bruger-authentication. Backend er bygget med MySQL for pålidelig data-håndtering, mens frontend leverer en intuitiv og seamless brugeroplevelse.",
     challenge: "The main challenges we faced...",
-    solution: "How we solved these challenges...",
+    duration: "1 måned",
     tags: ["Nextjs", "TailwindCSS", "MySQL"], // Keep tags consistent
     link: "https://project-url.com",
+    githubLink: "https://github.com/project-url.com",
     features: [
       "Feature 1 description",
       "Feature 2 description",

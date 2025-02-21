@@ -11,7 +11,7 @@ export default function FeaturedCases() {
       <div className="wrapper mx-auto">
         <div className="flex items-center justify-between max-lg:flex-col gap-6">
           <motion.h2
-            className="small-headline w-1/3 font-bold max-lg:w-full"
+            className="small-headline w-1/3 uppercase font-bold max-lg:w-full"
             {...fadeInUp}
           >
             Udvalgte <span className="text-[#BD8E2A] uppercase">projekter</span>
