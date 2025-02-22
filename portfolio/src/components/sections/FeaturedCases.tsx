@@ -37,7 +37,7 @@ export default function FeaturedCases() {
         </Link>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-lg:pt-2">
-          {cases.map((project, index) => (
+          {cases.slice(0, 3).map((project, index) => (
             <Link href={`/cases/${project.id}`} key={project.id}>
               <motion.div
                 className="group relative w-full h-[400px] rounded-xl overflow-hidden cursor-pointer"

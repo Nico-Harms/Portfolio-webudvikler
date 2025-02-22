@@ -13,7 +13,7 @@ export default function BackButton({ colorProp }: BackButtonProps) {
   return (
     <button
       onClick={() => router.back()}
-      className={`inline-flex items-center gap-2 ${colorProp} group transition-colors duration-300 py-4`}
+      className={`inline-flex items-center gap-2 ${colorProp} group transition-colors duration-300 py-4 max-lg:p-0`}
     >
       <ArrowLeftIcon
         className={`w-4 h-4 z-10 group-hover:text-[#D4AF37] ${colorProp}`}

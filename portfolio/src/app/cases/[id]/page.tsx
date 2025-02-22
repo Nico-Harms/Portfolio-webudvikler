@@ -2,7 +2,7 @@ import Image from "next/image";
 import { cases } from "@/data/cases";
 import Link from "next/link";
 import BackButton from "@/components/backbutton";
-import { Github, Link as LinkIcon } from "lucide-react";
+import { Github, Link as LinkIcon, Clock, Users } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export async function generateStaticParams() {
@@ -26,8 +26,8 @@ export default async function CaseDetail({
   return (
     <div className="min-h-screen bg-background overflow-hidden">
       {/* Hero Section */}
-      <section className="relative h-[70vh] w-full">
-        <div className="pl-4 pt-2">
+      <section className="relative h-[70vh] w-full max-lg:h-fit max-lg:py-10 ">
+        <div className="pl-4 pt-2 max-lg:pt-0">
           <BackButton colorProp="text-white" />
         </div>
 
@@ -41,25 +41,17 @@ export default async function CaseDetail({
             priority
             quality={100}
             sizes="100vw"
-            style={{
-              transform: "scale(1.02)",
-            }}
+            style={{ transform: "scale(1.02)" }}
           />
-          <div
-            className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-transparent"
-            style={{
-              backdropFilter: "blur(2px)",
-              WebkitBackdropFilter: "blur(2px)",
-            }}
-          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-transparent" />
         </div>
 
-        {/* Hero Content */}
-        <div className="relative h-full max-w-[1440px] mx-auto px-6 lg:px-12">
+        {/* Hero Content Container */}
+        <div className="relative h-full max-w-[1440px] mx-auto px-6 lg:px-12 max-lg:h-fit max-lg:pt-4">
           <div className="flex h-full items-center">
             {/* Left Content */}
             <div className="w-full lg:w-1/2 space-y-6">
-              {/* Tags */}
+              {/* Project Tags */}
               <div className="flex flex-wrap gap-2">
                 {caseData.tags.map((tech, index) => (
                   <span
@@ -71,12 +63,12 @@ export default async function CaseDetail({
                 ))}
               </div>
 
-              {/* Title */}
-              <h1 className="text-7xl font-bold text-white">
+              {/* Project Title */}
+              <h1 className="small-headline font-bold text-white">
                 {caseData.title}
               </h1>
 
-              {/* Description */}
+              {/* Project Intro */}
               <p className="text-white/80 text-lg max-w-xl leading-relaxed">
                 {caseData.intro}
               </p>
@@ -87,9 +79,9 @@ export default async function CaseDetail({
                   <Link href={caseData.githubLink} target="_blank">
                     <Badge
                       variant="secondary"
-                      className="flex items-center gap-2 py-3 px-6 text-base hover:scale-105 transition-transform"
+                      className="flex items-center gap-1 sm:gap-2 py-2 sm:py-3 px-3 sm:px-6 text-sm sm:text-base hover:scale-105 transition-transform"
                     >
-                      <Github className="w-5 h-5" />
+                      <Github className="w-4 h-4 sm:w-5 sm:h-5" />
                       View Code
                     </Badge>
                   </Link>
@@ -97,17 +89,12 @@ export default async function CaseDetail({
                 <Link href={caseData.link} target="_blank">
                   <Badge
                     variant="default"
-                    className="flex items-center gap-2 py-3 px-6 text-base hover:scale-105 transition-transform"
+                    className="flex items-center gap-1 sm:gap-2 py-2 sm:py-3 px-3 sm:px-6 text-sm sm:text-base hover:scale-105 transition-transform"
                   >
-                    <LinkIcon className="w-5 h-5" />
+                    <LinkIcon className="w-4 h-4 sm:w-5 sm:h-5" />
                     Live Demo
                   </Badge>
                 </Link>
-              </div>
-
-              {/* Duration */}
-              <div className="flex items-center gap-2 text-white/60 pt-2">
-                <span className="font-medium">Duration:</span>
               </div>
             </div>
 
@@ -128,22 +115,90 @@ export default async function CaseDetail({
         </div>
       </section>
 
-      {/* Project Details Section */}
-      <section className="max-w-[1440px] mx-auto px-6 lg:px-12 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold">Project Overview</h2>
-            <p className="text-muted-foreground color leading-relaxed">
-              {caseData.description}
-            </p>
+      {/* Project Demo Section */}
+      <section className="max-w-[1440px] flex flex-col mx-auto px-6 lg:px-12 py-20">
+        {caseData.demo && (
+          <div
+            className={`w-full flex gap-12 ${
+              caseData.demo.isMobile ? "flex-row max-lg:flex-col" : "flex-col"
+            }`}
+          >
+            {/* Video Container */}
+            <div
+              className={`relative w-1/2 ${
+                caseData.demo.isMobile ? "w-1/2 max-lg:w-full" : "w-full"
+              }`}
+            >
+              {/* Device Frame */}
+              <div
+                className={`relative mx-auto overflow-hidden drop-shadow-2xl ${
+                  caseData.demo.isMobile
+                    ? "max-w-[280px] rounded-[2.5rem] bg-[#1a1a1a] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.25),_0_30px_60px_-30px_rgba(0,0,0,0.3)] ring-1 ring-neutral-800/10"
+                    : "max-w-[1000px] rounded-2xl bg-[#252627]"
+                }`}
+              >
+                {/* Video Player */}
+                <div>
+                  <video
+                    className={`w-full h-full p-2 border-[#252627] ${
+                      caseData.demo.isMobile
+                        ? "rounded-[2rem] border-[1px] "
+                        : "rounded-xl"
+                    }`}
+                    controls
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  >
+                    <source src={caseData.demo.video} type="video/mp4" />
+                    <source src={caseData.demo.video} type="video/quicktime" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+            {/* Project Overview */}
+            <div
+              className={`w-1/2 mt-0 ${
+                caseData.demo.isMobile
+                  ? "w-1/2 max-lg:w-full"
+                  : "w-full max-w-[1000px] mx-auto"
+              }`}
+            >
+              <h2 className="text-3xl font-bold">Projekt beskrivelse</h2>
+              <div className="flex flex-col gap-4">
+                {/* Project Quick Stats */}
+                <div className="flex items-center flex-wrap gap-4 mt-4">
+                  <Badge
+                    variant="secondary"
+                    className="flex items-center gap-2 py-2 px-4 text-sm bg-black/5 hover:bg-black/5"
+                  >
+                    <Clock className="w-4 h-4" />
+                    {caseData.duration}
+                  </Badge>
+                  <Badge
+                    variant="secondary"
+                    className="flex items-center gap-2 py-2 px-4 text-sm bg-black/5 hover:bg-black/5"
+                  >
+                    <Users className="w-4 h-4" />
+                    {caseData.amountofpeople} Team medlemmer
+                  </Badge>
+                </div>
+
+                {/* Description Paragraphs */}
+                {caseData.description.map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className="text-muted-foreground leading-relaxed"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
           </div>
-          <div className="flex flex-col items-end">
-            <p>
-              <span className="font-bold">Duration:</span> {caseData.duration}
-            </p>
-          </div>
-          {/* Add more project details sections here */}
-        </div>
+        )}
       </section>
     </div>
   );
