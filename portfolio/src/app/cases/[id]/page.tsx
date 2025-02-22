@@ -39,8 +39,8 @@ export default async function CaseDetail({
             fill
             className="object-cover object-center"
             priority
-            quality={100}
-            sizes="100vw"
+            quality={85}
+            sizes="(max-width: 1024px) 100vw, 50vw"
             style={{ transform: "scale(1.02)" }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-transparent" />
@@ -106,6 +106,9 @@ export default async function CaseDetail({
                     src={caseData.mockupImage}
                     alt={caseData.title}
                     fill
+                    priority
+                    quality={85}
+                    sizes="(max-width: 1024px) 100vw, 45vw"
                     className="object-contain drop-shadow-2xl transition-all duration-500 ease-out group-hover:scale-105 group-hover:drop-shadow-[0_20px_20px_rgba(0,0,0,0.25)]"
                   />
                 </div>
@@ -131,30 +134,50 @@ export default async function CaseDetail({
             >
               {/* Device Frame */}
               <div
-                className={`relative mx-auto overflow-hidden drop-shadow-2xl ${
+                className={`relative mx-auto overflow-hidden ${
                   caseData.demo.isMobile
-                    ? "max-w-[280px] rounded-[2.5rem] bg-[#1a1a1a] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.25),_0_30px_60px_-30px_rgba(0,0,0,0.3)] ring-1 ring-neutral-800/10"
-                    : "max-w-[1000px] rounded-2xl bg-[#252627]"
+                    ? "max-w-[280px] rounded-[2rem] bg-[#585858] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.25),_0_30px_60px_-30px_rgba(0,0,0,0.3)] ring-1 ring-neutral-800/10"
+                    : "max-w-[1000px] rounded-2xl bg-transparent "
                 }`}
               >
-                {/* Video Player */}
-                <div>
-                  <video
-                    className={`w-full h-full p-2 border-[#252627] ${
-                      caseData.demo.isMobile
-                        ? "rounded-[2rem] border-[1px] "
-                        : "rounded-xl"
-                    }`}
-                    controls
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                  >
-                    <source src={caseData.demo.video} type="video/mp4" />
-                    <source src={caseData.demo.video} type="video/quicktime" />
-                    Your browser does not support the video tag.
-                  </video>
+                {/* Vimeo Embed */}
+                <div
+                  className={`${
+                    caseData.demo.isMobile ? "aspect-[9/19]" : "aspect-video"
+                  } relative`}
+                >
+                  {caseData.demo.videoType === "vimeo" ? (
+                    <iframe
+                      src={`https://player.vimeo.com/video/${caseData.demo.video}?h=${caseData.demo.vimeoHash}&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&controls=0&background=1`}
+                      className={` rounded-[2em] border-[5px] border-[#585858] ${
+                        caseData.demo.isMobile ? "rounded-[2rem]" : "rounded-xl"
+                      } w-full h-full absolute inset-0`}
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                      title={caseData.title}
+                      frameBorder="0"
+                    ></iframe>
+                  ) : (
+                    // Fallback to original video element if not a Vimeo ID
+                    <video
+                      className={`w-full h-full ${
+                        caseData.demo.isMobile
+                          ? "rounded-[2rem] border-[1px]"
+                          : "rounded-xl"
+                      } absolute inset-0`}
+                      controls
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                    >
+                      <source src={caseData.demo.video} type="video/mp4" />
+                      <source
+                        src={caseData.demo.video}
+                        type="video/quicktime"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  )}
                 </div>
               </div>
             </div>

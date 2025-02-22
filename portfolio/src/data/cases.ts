@@ -10,7 +10,7 @@ export const cases = [
     description: [
       "Lendr blev udviklet som en del af 1. semesters eksamen i webudvikling, hvor formålet var at lave to forskellige frontends, der begge benyttede den samme backend.",
       "Platformen fungerer som et bindeled mellem lejere og udlejere af kufferter og tasker, hvilket gør det muligt enten at finde en taske at leje eller at tjene penge ved at udleje sin egen.",
-      "Til webappen anvendte vi Next.js, mens Remix blev brugt til at opbygge et administrativt dashboard målrettet Lendr’s interne medarbejdere. Vores data — herunder brugerinformation og detaljer om tilgængelige kufferter og tasker — lagres i en MySQL-database.",
+      "Til webappen anvendte vi Next.js, mens Remix blev brugt til at opbygge et administrativt dashboard målrettet Lendr's interne medarbejdere. Vores data — herunder brugerinformation og detaljer om tilgængelige kufferter og tasker — lagres i en MySQL-database.",
       "For at sikre, at begge frontends let kan hente og opdatere disse data, udviklede vi desuden et PHP-baseret API.",
       "Der blev prioriteret funktionalitet i webappen, hvilket gør, at dashboardet endnu ikke har den fulde CRUD-opsætning, som et dashboard ellers ville kræve.",
       "Vil man se et eksempel, kan det tilgås her: https://lendr-2cbp.vercel.app",
@@ -23,8 +23,10 @@ export const cases = [
     link: "https://lendr-nine.vercel.app/",
     githubLink: "https://github.com/project-url.com",
     demo: {
-      video: "/cases/recordings/lendr.mp4",
+      video: "1059301542",
       isMobile: true,
+      videoType: "vimeo",
+      vimeoHash: "c9f9638a65",
     },
   },
   {
@@ -37,7 +39,7 @@ export const cases = [
     description: [
       "Lendr blev udviklet som en del af 1. semesters eksamen i webudvikling, hvor formålet var at lave to forskellige frontends, der begge benyttede den samme backend.",
       "Platformen fungerer som et bindeled mellem lejere og udlejere af kufferter og tasker, hvilket gør det muligt enten at finde en taske at leje eller at tjene penge ved at udleje sin egen.",
-      "Til webappen anvendte vi Next.js, mens Remix blev brugt til at opbygge et administrativt dashboard målrettet Lendr’s interne medarbejdere. Vores data — herunder brugerinformation og detaljer om tilgængelige kufferter og tasker — lagres i en MySQL-database.",
+      "Til webappen anvendte vi Next.js, mens Remix blev brugt til at opbygge et administrativt dashboard målrettet Lendr's interne medarbejdere. Vores data — herunder brugerinformation og detaljer om tilgængelige kufferter og tasker — lagres i en MySQL-database.",
       "For at sikre, at begge frontends let kan hente og opdatere disse data, udviklede vi desuden et PHP-baseret API.",
       "Der blev prioriteret funktionalitet i webappen, hvilket gør, at dashboardet endnu ikke har den fulde CRUD-opsætning, som et dashboard ellers ville kræve.",
       "Vil man se et eksempel, kan det tilgås her: https://lendr-2cbp.vercel.app",
@@ -50,8 +52,10 @@ export const cases = [
     link: "https://project-url.com",
     githubLink: "https://github.com/project-url.com",
     demo: {
-      video: "/cases/recordings/ligevaerd.mov",
+      video: "1059301597",
       isMobile: false,
+      videoType: "vimeo",
+      vimeoHash: "47f2e77808",
     },
   },
   {
@@ -64,7 +68,7 @@ export const cases = [
     description: [
       "Mealmate blev udviklet som en del af 1. semesters eksamen i webudvikling, hvor formålet var at lave to forskellige frontends, der begge benyttede den samme backend.",
       "Platformen fungerer som et bindeled mellem lejere og udlejere af kufferter og tasker, hvilket gør det muligt enten at finde en taske at leje eller at tjene penge ved at udleje sin egen.",
-      "Til webappen anvendte vi Next.js, mens Remix blev brugt til at opbygge et administrativt dashboard målrettet Lendr’s interne medarbejdere. Vores data — herunder brugerinformation og detaljer om tilgængelige kufferter og tasker — lagres i en MySQL-database.",
+      "Til webappen anvendte vi Next.js, mens Remix blev brugt til at opbygge et administrativt dashboard målrettet Lendr's interne medarbejdere. Vores data — herunder brugerinformation og detaljer om tilgængelige kufferter og tasker — lagres i en MySQL-database.",
       "For at sikre, at begge frontends let kan hente og opdatere disse data, udviklede vi desuden et PHP-baseret API.",
       "Der blev prioriteret funktionalitet i webappen, hvilket gør, at dashboardet endnu ikke har den fulde CRUD-opsætning, som et dashboard ellers ville kræve.",
       "Vil man se et eksempel, kan det tilgås her: https://lendr-2cbp.vercel.app",
@@ -77,8 +81,10 @@ export const cases = [
     link: "https://project-url.com",
     githubLink: "https://github.com/project-url.com",
     demo: {
-      video: "/cases/recordings/mealmate.mov",
-      isMobile: false,
+      video: "1059301712",
+      isMobile: true,
+      videoType: "vimeo",
+      vimeoHash: "d58f64692b",
     },
   },
   {
@@ -91,7 +97,7 @@ export const cases = [
     description: [
       "Lendr blev udviklet som en del af 1. semesters eksamen i webudvikling, hvor formålet var at lave to forskellige frontends, der begge benyttede den samme backend.",
       "Platformen fungerer som et bindeled mellem lejere og udlejere af kufferter og tasker, hvilket gør det muligt enten at finde en taske at leje eller at tjene penge ved at udleje sin egen.",
-      "Til webappen anvendte vi Next.js, mens Remix blev brugt til at opbygge et administrativt dashboard målrettet Lendr’s interne medarbejdere. Vores data — herunder brugerinformation og detaljer om tilgængelige kufferter og tasker — lagres i en MySQL-database.",
+      "Til webappen anvendte vi Next.js, mens Remix blev brugt til at opbygge et administrativt dashboard målrettet Lendr's interne medarbejdere. Vores data — herunder brugerinformation og detaljer om tilgængelige kufferter og tasker — lagres i en MySQL-database.",
       "For at sikre, at begge frontends let kan hente og opdatere disse data, udviklede vi desuden et PHP-baseret API.",
       "Der blev prioriteret funktionalitet i webappen, hvilket gør, at dashboardet endnu ikke har den fulde CRUD-opsætning, som et dashboard ellers ville kræve.",
       "Vil man se et eksempel, kan det tilgås her: https://lendr-2cbp.vercel.app",
@@ -106,6 +112,7 @@ export const cases = [
     demo: {
       video: "/cases/recordings/ownersclub.mov",
       isMobile: false,
+      videoType: "local",
     },
     duration: "Uregistreret",
     amountofpeople: "1",
