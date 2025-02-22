@@ -23,7 +23,7 @@ export const cases = [
     link: "https://lendr-nine.vercel.app/",
     githubLink: "https://github.com/project-url.com",
     demo: {
-      video: "/cases/recordings/lendr.mov",
+      video: "/cases/recordings/lendr.mp4",
       isMobile: true,
     },
   },
