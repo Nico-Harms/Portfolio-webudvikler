@@ -63,9 +63,9 @@ export default function IntroductionCase() {
               </span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-xl">
-              Her kan du finde alle mine projekter, hvad enten de er udført for
-              Brand by Hand, udviklet som skoleprojekter eller lavet som
-              fritidsprojekt.
+              Her kan du finde alle mine projekter, både dem udført for Brand by
+              Hand, udviklet som skoleprojekter eller lavet som
+              fritidsprojekter.
             </p>
             <p className="text-lg text-muted-foreground max-w-xl">
               Når jeg arbejder for Brand by Hand, har jeg som regel leveret

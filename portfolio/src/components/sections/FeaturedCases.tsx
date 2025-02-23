@@ -4,8 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { MoveRight } from "lucide-react";
 import { cases } from "@/data/cases";
+import { useRouter } from "next/navigation";
 
 export default function FeaturedCases() {
+  const router = useRouter();
+
+  const handleArchiveClick = () => {
+    window.scrollTo(0, 0);
+    router.push("/archievepage");
+  };
+
   return (
     <section id="projects" className="w-full distance-top">
       <div className="wrapper mx-auto">
@@ -15,7 +23,7 @@ export default function FeaturedCases() {
             {...fadeInUp}
           >
             Udvalgte <span className="text-[#BD8E2A] uppercase">projekter</span>
-            <span className="text-[#BD8E2A] uppercase">.</span>
+            <span className="uppercase">.</span>
           </motion.h2>
           <div className="flex w-1/2 flex-col items-end gap-4 max-lg:w-full">
             <p className="p-tag">
@@ -29,12 +37,12 @@ export default function FeaturedCases() {
           </div>
         </div>
 
-        <Link href="/archievepage">
+        <button onClick={handleArchiveClick} className="ml-auto block">
           <p className="text-end pb-2 flex items-center justify-end gap-2">
-            View all projects
+            Se alle projekter
             <MoveRight className="w-7 h-7 text-[#BD8E2A]" />
           </p>
-        </Link>
+        </button>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-lg:pt-2">
           {cases.slice(0, 3).map((project, index) => (

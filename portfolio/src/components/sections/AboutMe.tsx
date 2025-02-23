@@ -13,7 +13,7 @@ const aboutMe = [
   {
     title: "Hvem jeg er",
     content:
-      "Jeg er 27 år gammel og bosat i Aarhus, men flytter snart til København. Siden en tidlig alder har jeg altid haft en stærk passion for IT. Min fascination for teknologi og kreativ tænkning har motiveret mig til at forfølge en karriere som enten fullstack- eller frontend-udvikler. I sommer færdiggjorde jeg min uddannelse som multimediedesigner og er nu i gang med at tage en professionsbachelor i webudvikling. Jeg elsker at dykke ned i komplekse problemer og finde innovative løsninger, samtidig med at jeg bruger min kreativitet til at forme digitale idéer til virkelighed",
+      "Jeg er 27 år gammel og bosat i Aarhus, men flytter snart til København. Siden en tidlig alder har jeg altid haft en stærk passion for IT. Min fascination for teknologi og kreativ tænkning har motiveret mig til at forfølge en karriere som enten fullstack- eller frontend-udvikler. I sommer færdiggjorde jeg min uddannelse som multimediedesigner og er nu i gang med at tage en professionsbachelor i webudvikling. Jeg elsker at dykke ned i komplekse problemer og finde innovative løsninger, samtidig med at jeg bruger min kreativitet til at forme digitale idéer til virkelighed.",
   },
   {
     title: "Hvad jeg søger",

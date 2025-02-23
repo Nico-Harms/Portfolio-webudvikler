@@ -6,9 +6,11 @@ import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import IntroductionCase from "@/components/sections/IntroductionCase";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 export default function ArchivePage() {
   useSmoothScroll();
+  useScrollToTop();
 
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
