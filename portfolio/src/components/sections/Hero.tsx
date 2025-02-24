@@ -23,7 +23,7 @@ export const Hero = () => {
           className="tiny-headline w-4/5 max-lg:absolute bottom-[10%] max-lg:w-[90%] left-3"
           {...createDelayedFadeInUp(0.2)}
         >
-          Fullstack Developer med passion for interaktive løsninger og design
+          Fullstack Developer med passion for interaktive løsninger
         </motion.p>
 
         <div className="flex pl-20  w-full flex-col max-lg:pl-0">

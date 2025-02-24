@@ -26,7 +26,7 @@ export default async function CaseDetail({
   return (
     <div className="min-h-screen bg-background overflow-hidden">
       {/* Hero Section */}
-      <section className="relative h-[70vh] w-full max-lg:h-fit max-lg:py-10 ">
+      <section className="relative h-[70vh] pb-20 w-full max-lg:h-fit max-lg:py-10 ">
         <div className="pl-4 pt-2 max-lg:pt-0">
           <BackButton colorProp="text-white" />
         </div>
@@ -75,7 +75,7 @@ export default async function CaseDetail({
 
               {/* Project Links */}
               <div className="flex items-center gap-4 pt-4">
-                {caseData.githubLink && (
+                {caseData.githubLink && caseData.githubLink.length > 0 && (
                   <Link href={caseData.githubLink} target="_blank">
                     <Badge
                       variant="secondary"
