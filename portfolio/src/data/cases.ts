@@ -70,7 +70,7 @@ export const cases = [
     tags: ["React-router-7", "MongoDB", "Express"],
     amountofpeople: "3",
     duration: "3 dage",
-    link: "https://plantmate-ai-fan-1.onrender.com/",
+    link: "https://mealmate-ai-1.onrender.com/",
     githubLink: "https://github.com/eaaa-dob-wu-e24a/mealmate-ai",
     demo: {
       video: "1059301712",
