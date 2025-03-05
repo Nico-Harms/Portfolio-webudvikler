@@ -17,7 +17,7 @@ export const cases = [
       "Login: Admin@gmail.com | Adgangskode: admin",
       "Disclaimer: Webappen er udviklet til mobil format, og er ikke responsivt til desktop, grundet prioriteringen af funktionalitet i webappen.",
     ],
-    duration: "1 måned",
+    duration: "3 weeks",
     tags: ["Nextjs", "TailwindCSS", "MySQL"],
     amountofpeople: "3",
     link: "https://lendr-nine.vercel.app/",
@@ -39,7 +39,7 @@ export const cases = [
     description: [
       "Jeg har bygget Ligeværds hjemmeside i WordPress og anvendt PHP til at lave brugerdefinerede skabeloner, så kunden let kan vedligeholde og opdatere indholdet. For at muliggøre en fleksibel sideopsætning har jeg brugt Advanced Custom Fields (ACF), der gør det muligt at oprette og styre dynamiske sektioner direkte fra WordPress’ kontrolpanel.",
       "Til arrangementer benyttede jeg et plugin et Event Manager plugin, hvor jeg hentede metadata som dato og lokation via PHP og integrerede disse data i de individuelle sider.",
-      "Jeg har brugt Javascript i forbindelse med at definere flere variationer af enkelte sektioner, både i forbindelse med styling men også i forbindelse med at definere sektions indhold som tekst, billeder og videoer.",
+      "Jeg har brugt Javascript i forbindelse med at definere flere variationer af enkelte sektioner, både i forbindelse med styling men også i forbindelse med at definere sektions indhold som tekst, billeder og videoer. Timerne til projektet kan ikke repræsenteres, da det var en del af mit hovedprojekt.",
     ],
     tags: ["PHP", "Wordpress", "Javascript"],
     amountofpeople: "1",
@@ -91,7 +91,7 @@ export const cases = [
       "Ownersclub er udviklet i Wordpress, og anvendte Elementor til at bygge siden op da det var et krav fra Brand by hand. Produkterne er sat op med en API, hvor produkterne bliver trukket fra Østjysk vinforsyning",
       "Jeg kan ikke tage credit for API opsætningen, da vi har været flere inde over projektet, og jeg ikke har været med til at opsætte det. Min opgave har været og skulle arbejde med dataen som API'en giver, og sætte den ind i Wordpress.",
       "Hvilket herunder indebarer dynamisk opsætning af de enkelte produkter, som specifikationer, og kategorier, som er tilgængelige for kunden.",
-      "Jeg udviklede også en filter-funktion, som gør det muligt for kunden at filtrere produkterne efter forskellige kategorier, som er tilgængelige for kunden.",
+      "Jeg udviklede også en filter-funktion, som gør det muligt for kunden at filtrere produkterne efter forskellige kategorier, som er tilgængelige for kunden. Mængden af timerne skyldes kunden ønskede ydligere funktionalitet, efter projektets afslutning, hvilket er sket af flere omgange.",
     ],
 
     tags: ["Wordpress", "Elementor", "Javascript"],
@@ -102,7 +102,7 @@ export const cases = [
       videoType: "vimeo",
       vimeoHash: "0160868b10",
     },
-    duration: "Uregistreret",
+    duration: "60",
     amountofpeople: "1",
   },
   {
@@ -125,7 +125,7 @@ export const cases = [
       videoType: "vimeo",
       vimeoHash: "07a47fdaee",
     },
-    duration: "Uregistreret",
+    duration: "35 timer",
     amountofpeople: "2",
   },
 ];
