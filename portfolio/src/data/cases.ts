@@ -128,4 +128,42 @@ export const cases = [
     duration: "35 timer",
     amountofpeople: "2",
   },
+  {
+    id: 6,
+    title: "Bookspace",
+    backgroundImage: "/cases/bookspace.png",
+    mockupImage: "/cases/bookspace-mock.png",
+    githubLink: "https://github.com/Nico-Harms/Bookspace-exam",
+    intro:
+      "Bookspace er et individuel eksamensprojekt fra Webudvikling 2. semester, hvor vi blev bedømt på kode kvalitet og sikkerhed.",
+    description: [
+      "DISCLAIMER: Projektet er hostet på gratis version af Render, derfor ville serveren være langsom at starte op, hvis ikke den har været brugt for nylig.",
+      "Bookspace er en webapplikation, der hjælper brugere med at opdage, holde styr på og dele deres læseoplevelser.",
+      "Med en semi-moderne teknologistak sikrer platformen en smidig brugeroplevelse med realtidsfiltrering og et responsivt design.",
+
+      "Funktioner:",
+      "Personligt læsedashboard – Hold styr på dine læsemål, bogmærk dine favoritter, og følg din læseprogression.",
+      "Intelligent bogopdagelse – Find nye bøger med realtids søgefiltrering og genrekategorisering.",
+      "Social læseoplevelse – Bedøm bøger, skriv anmeldelser, og få anbefalinger med 'Ugens Bog'.",
+      "Responsivt design – Gennemført og flydende brugeroplevelse på både computer, tablet og mobil.",
+
+      "Teknisk Implementering:",
+      "Frontend: Bygget i React med React Router og forbedret med Motion for glidende animationer.",
+      "Database: MongoDB sikrer fleksibel lagring af data med effektiv indeksering.",
+      "Brugerhåndtering: Sikker login med både lokal brugeroprettelse og OAuth-autentificering.",
+      "State Management: Klient-side filtrering med debounced søgning for hurtigere brugerfeedback.",
+      "Datamodelering: Strukturerede skemaer med virtuelle egenskaber, der håndterer relationer mellem data.",
+    ],
+
+    tags: ["React-router-7", "Express", "MongoDB"],
+    link: "https://awu-exam-nico-harms.onrender.com/",
+    demo: {
+      video: "1066843725",
+      isMobile: true,
+      videoType: "vimeo",
+      vimeoHash: "dad3271500",
+    },
+    duration: "1 uge",
+    amountofpeople: "1",
+  },
 ];
