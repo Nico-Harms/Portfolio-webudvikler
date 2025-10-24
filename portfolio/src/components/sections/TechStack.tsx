@@ -55,6 +55,21 @@ export const TechStack = () => {
             text: "Svelte",
             alt: "Svelte Logo",
           },
+          {
+            image: techStackImages.sanity,
+            text: "Sanity",
+            alt: "Sanity Logo",
+          },
+          {
+            image: techStackImages.umbraco,
+            text: "Umbraco",
+            alt: "Umbraco Logo",
+          },
+          {
+            image: techStackImages.wordpress,
+            text: "WordPress",
+            alt: "WordPress Logo",
+          },
         ]}
         autoplaySpeed={5000}
       />

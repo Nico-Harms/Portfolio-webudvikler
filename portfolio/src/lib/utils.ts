@@ -6,12 +6,15 @@ import nextjs from "../../public/techstack/nextjs.svg";
 import react from "../../public/techstack/react.svg";
 import php from "../../public/techstack/php.svg";
 import mongodb from "../../public/techstack/mongodb.svg";
-
+import wordpress from "../../public/techstack/wordpress.svg";
 import mysql from "../../public/techstack/mysql.svg";
 import remix from "../../public/techstack/remix.svg";
 import tailwind from "../../public/techstack/tailwindcss.svg";
 import typescript from "../../public/techstack/typescript.svg";
 import svelte from "../../public/techstack/svelte.svg";
+import sanity from "../../public/techstack/sanity.svg";
+import umbraco from "../../public/techstack/umbraco.svg";
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
@@ -27,6 +30,9 @@ export const techStackImages = {
   mongodb,
   svelte,
   typescript,
+  sanity,
+  umbraco,
+  wordpress,
   // Add more images as needed
 } as const;
 
