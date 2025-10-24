@@ -13,12 +13,12 @@ const aboutMe = [
   {
     title: "Hvem jeg er",
     content:
-      "Jeg er 27 år gammel og bosat i Aarhus, men flytter snart til København. Siden en tidlig alder har jeg altid haft en stærk passion for IT. Min fascination for teknologi og kreativ tænkning har motiveret mig til at forfølge en karriere som enten fullstack- eller frontend-udvikler. I sommer færdiggjorde jeg min uddannelse som multimediedesigner og er nu i gang med at tage en professionsbachelor i webudvikling. Jeg elsker at dykke ned i komplekse problemer og finde innovative løsninger, samtidig med at jeg bruger min kreativitet til at forme digitale idéer til virkelighed.",
+      "Jeg er 27 år gammel og bosat på Nørrebro i København. Siden en tidlig alder har jeg altid haft en stærk passion for IT. Min fascination for teknologi og kreativ tænkning har motiveret mig til at forfølge en karriere som enten fullstack- eller frontend-udvikler. I sommer færdiggjorde jeg min uddannelse som multimediedesigner og er nu i gang med at tage en professionsbachelor i webudvikling. Jeg elsker at dykke ned i komplekse problemer og finde innovative løsninger, samtidig med at jeg bruger min kreativitet til at forme digitale idéer til virkelighed.",
   },
   {
     title: "Hvad jeg søger",
     content:
-      "Jeg søger en praktikplads, hvor jeg kan tilbringe 10 uger i et udviklende og lærerigt miljø. Ideelt set ønsker jeg også at fortsætte samarbejdet i yderligere 10 uger efter praktikken, hvor min bachelorhovedopgave kan tage udgangspunkt i arbejdet for virksomheden. Jeg motiveres af at samarbejde med erfarne udviklere og få praktisk erfaring med de nyeste teknologier, særligt inden for frameworks, som jeg har en stor faglig interesse for. Jeg er ivrig efter at bidrage med mine færdigheder og mit perspektiv. Med min faglige baggrund og kreative tilgang tror jeg på, at jeg kan tilføre værdi til teamet og samtidig få mest muligt ud af de muligheder, et praktikforløb kan tilbyde.",
+      "Jeg søger en fuldtidsstilling som enten frontend- eller fullstack-udvikler, hvor jeg kan arbejde i et udviklende og lærerigt miljø. Jeg motiveres af at samarbejde med erfarne udviklere og få praktisk erfaring med de nyeste teknologier, særligt inden for frameworks, som jeg har en stor faglig interesse for. Jeg er ivrig efter at bidrage med mine færdigheder og mit perspektiv. Med min faglige baggrund og kreative tilgang tror jeg på, at jeg kan tilføre værdi til teamet og samtidig fortsætte min professionelle udvikling som udvikler.",
   },
   {
     title: "Kontakt oplysninger",
