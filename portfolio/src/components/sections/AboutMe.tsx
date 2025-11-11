@@ -158,7 +158,7 @@ export default function AboutMe() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-        <div className="absolute bottom-0 left-0 max-lg:bottom-[-65px]">
+        <div className="absolute bottom-[-50px] left-0 max-lg:bottom-[-65px]">
           <a
             href="/personal/CV - Nicolai Harms.pdf"
             target="_blank"
