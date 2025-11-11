@@ -4,6 +4,7 @@ import Link from "next/link";
 import BackButton from "@/components/backbutton";
 import { Github, Link as LinkIcon, Clock, Users } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import VideoPlayer from "@/components/VideoPlayer";
 
 export async function generateStaticParams() {
   return cases.map((caseItem) => ({
@@ -86,15 +87,17 @@ export default async function CaseDetail({
                     </Badge>
                   </Link>
                 )}
-                <Link href={caseData.link} target="_blank">
-                  <Badge
-                    variant="default"
-                    className="flex items-center gap-1 sm:gap-2 py-2 sm:py-3 px-3 sm:px-6 text-sm sm:text-base hover:scale-105 transition-transform"
-                  >
-                    <LinkIcon className="w-4 h-4 sm:w-5 sm:h-5" />
-                    Live Demo
-                  </Badge>
-                </Link>
+                {caseData.link && caseData.link.length > 0 && (
+                  <Link href={caseData.link} target="_blank">
+                    <Badge
+                      variant="default"
+                      className="flex items-center gap-1 sm:gap-2 py-2 sm:py-3 px-3 sm:px-6 text-sm sm:text-base hover:scale-105 transition-transform"
+                    >
+                      <LinkIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+                      Live Demo
+                    </Badge>
+                  </Link>
+                )}
               </div>
             </div>
 
@@ -132,54 +135,13 @@ export default async function CaseDetail({
                 caseData.demo.isMobile ? "w-1/2 max-lg:w-full" : "w-full"
               }`}
             >
-              {/* Device Frame */}
-              <div
-                className={`relative mx-auto overflow-hidden ${
-                  caseData.demo.isMobile
-                    ? "max-w-[280px] rounded-[2rem] bg-[#585858] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.25),_0_30px_60px_-30px_rgba(0,0,0,0.3)] ring-1 ring-neutral-800/10"
-                    : "max-w-[1000px] rounded-2xl bg-transparent "
-                }`}
-              >
-                {/* Vimeo Embed */}
-                <div
-                  className={`${
-                    caseData.demo.isMobile ? "aspect-[9/19]" : "aspect-video"
-                  } relative`}
-                >
-                  {caseData.demo.videoType === "vimeo" ? (
-                    <iframe
-                      src={`https://player.vimeo.com/video/${caseData.demo.video}?h=${caseData.demo.vimeoHash}&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&controls=0&background=1`}
-                      className={` rounded-[2em] border-[5px] border-[#585858] ${
-                        caseData.demo.isMobile ? "rounded-[2rem]" : "rounded-xl"
-                      } w-full h-full absolute inset-0`}
-                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                      title={caseData.title}
-                      frameBorder="0"
-                    ></iframe>
-                  ) : (
-                    // Fallback to original video element if not a Vimeo ID
-                    <video
-                      className={`w-full h-full ${
-                        caseData.demo.isMobile
-                          ? "rounded-[2rem] border-[1px]"
-                          : "rounded-xl"
-                      } absolute inset-0`}
-                      controls
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                    >
-                      <source src={caseData.demo.video} type="video/mp4" />
-                      <source
-                        src={caseData.demo.video}
-                        type="video/quicktime"
-                      />
-                      Your browser does not support the video tag.
-                    </video>
-                  )}
-                </div>
-              </div>
+              <VideoPlayer
+                video={caseData.demo.video}
+                videoType={caseData.demo.videoType as "vimeo" | "video"}
+                vimeoHash={caseData.demo.vimeoHash}
+                isMobile={caseData.demo.isMobile}
+                title={caseData.title}
+              />
             </div>
             {/* Project Overview */}
             <div

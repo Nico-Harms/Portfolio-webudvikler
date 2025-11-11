@@ -1,5 +1,40 @@
 // data/cases.ts
+// Note: vimeoHash is optional - include it for unlisted videos, omit it for public videos
+// Note: link is optional - omit it for projects that cannot be accessed publicly
 export const cases = [
+  {
+    id: 0,
+    title: "Sanity Plugin - Hermés",
+    backgroundImage: "/cases/hermes.png",
+    mockupImage: "/cases/hermes-mock.png",
+    intro:
+      "ON-GOING PROJECT: Hermés er en plugin lavet til Sanity CMS, som gør det muligt at automatisere content-publishing.",
+    description: [
+      "Hermés er et plugin jeg udvikler i forbindelse med mit bachelorprojekt for Kruso. Pluginet integrerer Notion, Sanity CMS og AI-modeller for at automatisere content-produktion.",
+
+      "Systemet fungerer ved at hente artikelidéer fra en Notion content-kalender og generere færdige artikler vha. valgte LLM-provider (OpenAI, Mistral, Gemini eller Perplexity).",
+
+      "En automatiseret cron-job kører hver mandag og genererer artikler for ugen baseret på planlagte emner i Notion. Artiklerne oprettes som drafts i Sanity, hvor redaktører kan gennemse, redigere og godkende dem.",
+
+      "Efter godkendelse håndterer systemet automatisk publicering på den planlagte dato, og synkroniserer status tilbage til Notion gennem hele flowet (In progress -> Approved -> Published).",
+
+      "Pluginet inkluderer dynamisk field-mapping mellem Notion og Sanity, support for komplekse schemas inkl. Portable Text og modules, samt intelligent content-preview der tilpasser sig forskellige dokumentstrukturer.",
+
+      "Alle konfigurationer, API-nøgler og draft-metadata gemmes sikkert i MongoDB, hvilket gør pluginet multi-tenant ready. Hvert team kan have sin egen content-plan, LLM-valg og Sanity-setup.",
+
+      "Resultatet er et end-to-end automatiseret system der producerer kvalitets-content til websites, men bevarer det vigtige menneskelige godkendelseslag for at sikre kvalitet og brand-alignment.",
+    ],
+    tags: ["Next.js", "TailwindCSS", "Sanity", "Notion", "MongoDB", "LLM"],
+    duration: "Ongoing",
+    amountofpeople: "1",
+    link: "https://hermes-plugin.vercel.app/",
+    demo: {
+      video: "1135679830",
+      isMobile: false,
+      videoType: "vimeo",
+      vimeoHash: "c9f9638a65",
+    },
+  },
   {
     id: 1,
     title: "Lendr",
@@ -44,7 +79,7 @@ export const cases = [
     tags: ["PHP", "Wordpress", "Javascript"],
     amountofpeople: "1",
     duration: "Uregistreret",
-    link: "https://ligevaerdv2.byhand.nu/",
+    link: "https://ligevaerd.dk/",
     demo: {
       video: "1059301597",
       isMobile: false,
@@ -81,6 +116,30 @@ export const cases = [
   },
   {
     id: 4,
+    title: "50/90 Estimating tool",
+    backgroundImage: "/cases/50-90.png",
+    mockupImage: "/cases/50-90-mock.png",
+    intro:
+      "50/90 er et internt værktøj lavet til at estimere opgaver og projekter til Kruso.",
+    description: [
+      "Projektet er lavet i forbindelse med mit praktikforløb hos Kruso, hvor jeg arbejdede sammen med to andre praktikanter, som primært var ansvarlige for backend. Jeg bidrog dog også selv med enkelte backend-opgaver.",
+      "Projektet anvender klassisk Umbraco (Razor-baseret) med React og TailwindCSS. Kruso har mulighed for at oprette og redigere opgaver og projekter samt se en oversigt over alle eksisterende opgaver og projekter.",
+      "Til alle tabeller er der udviklet en genanvendelig funktion, der understøtter tastaturgenveje, f.eks. E = Global Edit, Enter = Global Save og ESC = Global Cancel.",
+      "Der er desuden udviklet en global søgefunktion samt en eksportlogik, der gør det muligt at eksportere data til både en offentlig side og som CSV-fil.",
+      "Autentificeringen er bygget op omkring Umbraco Members, så kun medlemmer af Kruso kan få adgang til at se og redigere opgaver og projekter.",
+    ],
+    tags: ["Umbraco", "C#", "React", "TailwindCSS"],
+    amountofpeople: "1",
+    duration: "Ongoing",
+    link: "https://5090-estimating-tool.vercel.app/",
+    demo: {
+      video: "1135708221",
+      isMobile: false,
+      videoType: "vimeo",
+    },
+  },
+  {
+    id: 5,
     title: "Owners Club",
     backgroundImage: "/cases/ownersclub.png",
     mockupImage: "/cases/ownersclub-mock.png",
@@ -106,7 +165,7 @@ export const cases = [
     amountofpeople: "1",
   },
   {
-    id: 5,
+    id: 6,
     title: "Mindyourfocus",
     backgroundImage: "/cases/mindyourfocus.png",
     mockupImage: "/cases/mindyourfocus-mock.png",
@@ -129,7 +188,7 @@ export const cases = [
     amountofpeople: "2",
   },
   {
-    id: 6,
+    id: 7,
     title: "Bookspace",
     backgroundImage: "/cases/bookspace.png",
     mockupImage: "/cases/bookspace-mock.png",
