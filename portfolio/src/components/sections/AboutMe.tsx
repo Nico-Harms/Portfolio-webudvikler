@@ -160,7 +160,7 @@ export default function AboutMe() {
         </Accordion>
         <div className="absolute bottom-[-50px] left-0 max-lg:bottom-[-65px]">
           <a
-            href="/personal/CV - Nicolai Harms.pdf"
+            href="/personal/CV Nicolai - English.pdf"
             target="_blank"
             className="text-lg bg-black text-white px-4 py-2 rounded-md hover:bg-white hover:text-golden transition-all duration-300 hover:border-solid hover:border-golden hover:border-2"
           >
