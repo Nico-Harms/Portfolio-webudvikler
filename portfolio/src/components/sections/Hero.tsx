@@ -9,7 +9,7 @@ export const Hero = () => {
     <section className="flex flex-row justify-start max-lg:flex-col-reverse ">
       <div className="z-10 flex w-full lg:w-1/2 flex-col gap-[20%] px-10">
         <h1 className="headline text-[#BD8E2A] drop-shadow-[0_0_10px_rgba(0,0,0,0.10)] w-[140%] drop-shadow- ml-[-40px] max-lg:absolute bottom-[45%] max-lg:w-full">
-          WEBUDVIKLER
+          FULLSTACK DEVELOPER
           <span className="text-black pr-5 whitespace-nowrap">
             <br />
             NICOLAI HARMS
