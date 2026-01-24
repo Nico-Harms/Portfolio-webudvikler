@@ -63,19 +63,22 @@ export default function IntroductionCase() {
               </span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-xl">
-              Her kan du finde alle mine projekter, både dem udført for Brand by
-              Hand, udviklet som skoleprojekter eller lavet som
-              fritidsprojekter.
+             Her kan du finde et overblik over mine projekter, herunder arbejde udført for Brand by Hand og Kruso, 
+             skoleprojekter samt fritidsprojekter.
+
             </p>
             <p className="text-lg text-muted-foreground max-w-xl">
-              Når jeg arbejder for Brand by Hand, har jeg som regel leveret
-              WordPress-løsninger til forskellige kundetyper. Jeg har haft
-              direkte dialog med kunderne om tidsestimater og forventninger samt
-              samarbejdet tæt med designere omkring brugervenligheden.
-            </p>
+          
+            Hos Kruso har jeg arbejdet med deres velkendte CMS-værktøjer, som spænder bredt. 
+            Mit primære fokus har dog været på Umbraco og Sanity, hvor jeg har udviklet forskellige 
+            interne værktøjer til deres brug. Derudover har jeg også bidraget til eksterne cases, hvor særligt min kreativitet og tekniske viden har været i spil.
+                        </p>
+
+                        <p className="text-lg text-muted-foreground max-w-xl">            Hos Brand by Hand har jeg primært leveret WordPress-løsninger til forskellige kundetyper. Jeg har haft direkte dialog med kunder omkring tidsestimater og forventningsafstemning samt arbejdet tæt sammen med designere for at sikre en høj grad af brugervenlighed.
+</p>
             <p className="text-lg text-muted-foreground max-w-xl">
               I mine skoleprojekter har jeg fokuseret på at udforske nye
-              teknologier, særligt moderne frameworks. Det stemmer godt overens
+              teknologier, som f.eks. MongoDB, mySQL moderne frameworks. Det stemmer godt overens
               med min passion for webudvikling og giver mig mulighed for at
               holde mig opdateret med de nyeste trends.
             </p>
