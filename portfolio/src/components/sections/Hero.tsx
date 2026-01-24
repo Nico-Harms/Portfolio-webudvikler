@@ -8,15 +8,15 @@ export const Hero = () => {
   return (
     <section className="flex flex-row justify-start max-lg:flex-col-reverse ">
       <div className="z-10 flex w-full lg:w-1/2 flex-col gap-[20%] px-10">
-        <h1 className="headline text-[#BD8E2A] drop-shadow-[0_0_10px_rgba(0,0,0,0.10)] w-[140%] drop-shadow- ml-[-40px] max-lg:absolute bottom-[45%] max-lg:w-full">
-          FULLSTACK DEVELOPER
+        <h1 className="headline whitespace-wrap text-[#BD8E2A] drop-shadow-[0_0_10px_rgba(0,0,0,0.10)] w-[140%] drop-shadow- ml-[-40px] max-lg:absolute bottom-[45%] max-lg:w-full lg:whitespace-nowrap">
+          FULLSTACK DEVELOPER.
           <span className="text-black pr-5 whitespace-nowrap">
             <br />
             NICOLAI HARMS
           </span>
         </h1>
         <p className="tiny-headline w-4/5 max-lg:absolute bottom-[10%] max-lg:w-[90%] left-3">
-          Fullstack Developer med passion for interaktive løsninger
+          Nysgerrig udvikler med passion for interaktive løsninger
         </p>
 
         <div className="flex pl-20  w-full flex-col max-lg:pl-0">
