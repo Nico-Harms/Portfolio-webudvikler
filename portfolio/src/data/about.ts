@@ -8,7 +8,7 @@ export const aboutSections: AboutSection[] = [
   {
     title: "Hvem jeg er",
     content:
-      "Jeg er 27 år gammel og bosat på Nørrebro i København. Siden en tidlig alder har jeg altid haft en stærk passion for IT. Min fascination for teknologi og kreativ tænkning har motiveret mig til at forfølge en karriere som enten fullstack- eller frontend-udvikler. I sommeren 2024 færdiggjorde jeg min uddannelse som multimediedesigner og er nu i gang med at tage en professionsbachelor i webudvikling. Jeg elsker at dykke ned i komplekse problemer og finde innovative løsninger, samtidig med at jeg bruger min kreativitet til at forme digitale idéer til virkelighed.",
+      "Jeg er 28 år gammel og bosat på Nørrebro i København. Siden en tidlig alder har jeg altid haft en stærk passion for IT. Min fascination for teknologi og kreativ tænkning har motiveret mig til at forfølge en karriere som enten fullstack- eller frontend-udvikler. I sommeren 2024 færdiggjorde jeg min uddannelse som multimediedesigner og blev i Januar 2026 færdig med min professionsbachelor i webudvikling. Jeg elsker at dykke ned i komplekse problemer og finde innovative løsninger, samtidig med at jeg bruger min kreativitet til at forme digitale idéer til virkelighed. Idag arbejder jeg som Software Engineer hos Propane",
   },
   {
     title: "Hvad jeg søger",
