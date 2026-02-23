@@ -248,9 +248,16 @@ export default function AboutMe() {
                       {section.isContact ? (
                         <ContactInfo />
                       ) : (
-                        <p className="text-base leading-[1.7] text-gray-600 dark:text-gray-400">
-                          {section.content}
-                        </p>
+                        <div className="space-y-4">
+                          {section.content?.map((paragraph, pi) => (
+                            <p
+                              key={pi}
+                              className="text-base leading-[1.7] text-gray-600 dark:text-gray-400"
+                            >
+                              {paragraph}
+                            </p>
+                          ))}
+                        </div>
                       )}
                     </div>
                   ))}
