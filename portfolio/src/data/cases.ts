@@ -229,4 +229,33 @@ export const cases = [
     duration: "1 uge",
     amountofpeople: "1",
   },
+  {
+    id: 8,
+    title: "Lendr",
+    backgroundImage: "/cases/lendr.png",
+    mockupImage: "/cases/lendr-mock.png",
+    intro:
+      "Lendr er en innovativ låne-platform udviklet med Next.js og TailwindCSS.",
+    description: [
+      "Lendr blev udviklet som en del af 1. semesters eksamen i webudvikling, hvor formålet var at lave to forskellige frontends, der begge benyttede den samme backend.",
+      "Platformen fungerer som et bindeled mellem lejere og udlejere af kufferter og tasker, hvilket gør det muligt enten at finde en taske at leje eller at tjene penge ved at udleje sin egen.",
+      "Til webappen anvendte vi Next.js, mens Remix blev brugt til at opbygge et administrativt dashboard målrettet Lendr's interne medarbejdere. Vores data — herunder brugerinformation og detaljer om tilgængelige kufferter og tasker — lagres i en MySQL-database.",
+      "For at sikre, at begge frontends let kan hente og opdatere disse data, udviklede vi desuden et PHP-baseret API.",
+      "Der blev prioriteret funktionalitet i webappen, hvilket gør, at dashboardet endnu ikke har den fulde CRUD-opsætning, som et dashboard ellers ville kræve.",
+      "Vil man se et eksempel, kan det tilgås her: https://lendr-2cbp.vercel.app",
+      "Login: Admin@gmail.com | Adgangskode: admin",
+      "Disclaimer: Webappen er udviklet til mobil format, og er ikke responsivt til desktop, grundet prioriteringen af funktionalitet i webappen.",
+    ],
+    duration: "3 weeks",
+    tags: ["Nextjs", "TailwindCSS", "MySQL"],
+    amountofpeople: "3",
+    link: "https://lendr-nine.vercel.app/",
+    githubLink: "https://github.com/eaaa-dob-wu-e24a/final-project-ent",
+    demo: {
+      video: "1059301542",
+      isMobile: true,
+      videoType: "vimeo",
+      vimeoHash: "c9f9638a65",
+    },
+  },
 ];
