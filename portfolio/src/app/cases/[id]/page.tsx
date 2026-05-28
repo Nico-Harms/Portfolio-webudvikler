@@ -123,13 +123,12 @@ export default async function CaseDetail({
 
       {/* Project Demo Section */}
       <section className="max-w-[1440px] flex flex-col mx-auto px-6 lg:px-12 py-20">
-        {caseData.demo && (
-          <div
-            className={`w-full flex gap-12 ${
-              caseData.demo.isMobile ? "flex-row max-lg:flex-col" : "flex-col"
-            }`}
-          >
-            {/* Video Container */}
+        <div
+          className={`w-full flex gap-12 ${
+            caseData.demo?.isMobile ? "flex-row max-lg:flex-col" : "flex-col"
+          }`}
+        >
+          {caseData.demo && (
             <div
               className={`relative w-1/2 ${
                 caseData.demo.isMobile ? "w-1/2 max-lg:w-full" : "w-full"
@@ -143,47 +142,47 @@ export default async function CaseDetail({
                 title={caseData.title}
               />
             </div>
-            {/* Project Overview */}
-            <div
-              className={`w-1/2 mt-0 ${
-                caseData.demo.isMobile
+          )}
+
+          <div
+            className={`mt-0 ${
+              caseData.demo
+                ? caseData.demo.isMobile
                   ? "w-1/2 max-lg:w-full"
                   : "w-full max-w-[1000px] mx-auto"
-              }`}
-            >
-              <h2 className="text-3xl font-bold">Projekt beskrivelse</h2>
-              <div className="flex flex-col gap-4">
-                {/* Project Quick Stats */}
-                <div className="flex items-center flex-wrap gap-4 mt-4">
-                  <Badge
-                    variant="secondary"
-                    className="flex items-center gap-2 py-2 px-4 text-sm bg-black/5 hover:bg-black/5"
-                  >
-                    <Clock className="w-4 h-4" />
-                    {caseData.duration}
-                  </Badge>
-                  <Badge
-                    variant="secondary"
-                    className="flex items-center gap-2 py-2 px-4 text-sm bg-black/5 hover:bg-black/5"
-                  >
-                    <Users className="w-4 h-4" />
-                    {caseData.amountofpeople} Team medlemmer
-                  </Badge>
-                </div>
-
-                {/* Description Paragraphs */}
-                {caseData.description.map((paragraph, index) => (
-                  <p
-                    key={index}
-                    className="text-muted-foreground leading-relaxed"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+                : "w-full max-w-[1000px] mx-auto"
+            }`}
+          >
+            <h2 className="text-3xl font-bold">Projekt beskrivelse</h2>
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center flex-wrap gap-4 mt-4">
+                <Badge
+                  variant="secondary"
+                  className="flex items-center gap-2 py-2 px-4 text-sm bg-black/5 hover:bg-black/5"
+                >
+                  <Clock className="w-4 h-4" />
+                  {caseData.duration}
+                </Badge>
+                <Badge
+                  variant="secondary"
+                  className="flex items-center gap-2 py-2 px-4 text-sm bg-black/5 hover:bg-black/5"
+                >
+                  <Users className="w-4 h-4" />
+                  {caseData.amountofpeople} Team medlemmer
+                </Badge>
               </div>
+
+              {caseData.description.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className="text-muted-foreground leading-relaxed"
+                >
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </div>
-        )}
+        </div>
       </section>
     </div>
   );
